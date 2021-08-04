@@ -1,18 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/menu"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prev_song_image" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/current_song_image"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/next_song_image" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/song_title"
+        android:textSize="30dp"
+        android:textColor="#FFF"
+        android:fontFamily="@font/lato_light"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/singer"
+        android:textSize="12dp"
+        android:textColor="#FFF"
+        android:fontFamily="@font/lato_regular"
+        android:layout_gravity="center"
+        android:layout_marginBottom="70dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wave"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/repeat"
+                android:scaleType="fitXY"
+                android:background="@null" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/revind"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="60dp"
+                android:background="@null" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/play_button"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@null" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fast_forward"
+                android:scaleType="fitXY"
+                android:layout_marginRight="60dp"
+                android:background="@null" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/speaker"
+                android:scaleType="fitXY"
+                android:background="@null" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
